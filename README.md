@@ -18,6 +18,8 @@ You'll find the `disqus-cli.php` script in the `bin` directory of your new proje
 
 Simply add the `compwright/disqus-cli` package to your `require` section in composer.json and run `composer update`.
 
+Composer will copy the `bin/disqus-cli.php` script to your project `bin/` directory.
+
 ## Configuration
 
 To use this script, you will need to define a `.env` file with the following settings:
