@@ -1,0 +1,23 @@
+{
+    "name": "compwright/disqus-cli",
+    "description": "A simple command-line client for the Disqus API",
+    "require": {
+        "php": ">=5.4",
+        "vlucas/phpdotenv": "~1.0",
+        "aura/cli": "~2.0"
+    },
+    "require-dev": {
+        "drexarj/disqus-php": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathon Hill",
+            "email": "jhill9693@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "compwright\\DisqusCLI\\": ["src/"] }
+    },
+    "bin": ["bin/disqus-cli"]
+}
