@@ -19,5 +19,5 @@
     "autoload": {
         "psr-4": { "compwright\\DisqusCLI\\": ["src/"] }
     },
-    "bin": ["bin/disqus-cli"]
+    "bin": ["bin/disqus-cli.php"]
 }
