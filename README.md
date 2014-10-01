@@ -12,13 +12,21 @@ This is a Composer package. To install, you will need to have [Composer installe
 $ composer create-project compwright/disqus-cli /path/to/install/dir
 ```
 
-You'll find the `disqus-cli.php` script in the `bin` directory of your new project.
+Run the script from your project root directory:
+
+```
+$ bin/disqus-cli.php
+```
 
 ### In an existing project
 
 Simply add the `compwright/disqus-cli` package to your `require` section in composer.json and run `composer update`.
 
-Composer will copy the `bin/disqus-cli.php` script to your project `bin/` directory.
+Run the script from your project root directory:
+
+```
+$ vendor/bin/disqus-cli.php
+```
 
 ## Configuration
 

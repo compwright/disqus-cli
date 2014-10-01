@@ -12,7 +12,16 @@ $options = [
 // Composer will move this script into vendor/bin;
 // so this will work as a standalone app or use
 // the root project's autoloader
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+if (file_exists('vendor/autoload.php'))
+{
+	$basedir = getcwd();
+	require_once 'vendor/autoload.php';
+}
+else
+{
+	fwrite(STDERR, 'Could not find the vendor/autoload.php file' . PHP_EOL);
+	exit(1);
+}
 
 use Aura\Cli\CliFactory;
 use Aura\Cli\Status;
@@ -43,7 +52,7 @@ $optionsParser->parseInput($context->argv->get());
 try
 {
 	// Load the configuration .env file
-	Dotenv::load(dirname(__DIR__));
+	Dotenv::load(getcwd());
 	Dotenv::required([
 		'DISQUS_API_KEY',
 		'DISQUS_API_SECRET',
